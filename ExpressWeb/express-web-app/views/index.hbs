@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+{{#if isAuthenticated}}
+  <p>Hi {{username}}!</p>
+  <p><a href='/users/id'>View ID token claims</a></p>
+  <p><a href='/auth/acquireToken'>Acquire a token to call the Microsoft Graph
+      API</a></p>
+  <p><a href='/auth/signout'>Sign out</a></p>
+{{else}}
+  <p>Welcome to {{title}}</p>
+  <a href='/auth/signin'>Sign in</a>
+{{/if}}
